@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* 使用重置样式表 */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, 
+var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;    
+}
+body{
+    line-height:1;
+    font-family: '微软雅黑'; 
+    width: 100%;
+    height: 100%;   
+    overflow-x: hidden;
+    -ms-overflow-x: hidden;
+}
+ol,ul{
+    list-style:none;
+}
+blockquote, q{
+    quotes:none;
+}
+blockquote:before, blockquote:after, q:before, q:after{
+    content: '';
+    content:none;
+}
+
+ 
+/* remember to define focus styles! */
+:focus{
+    outline:0;
+}
+/* remeber to highlight inserts somehow */
+ins{
+    text-decoration:none;
+}
+del{
+    text-decoration:line-through;
+}
+
+/* tables still need 'cellspacing="0" in the markup' */
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+
+/*formal style begin*/
+
+header{
+    background: #2CADFA;
+}
+
+.index-logo img{
+         margin:1% 43%;
+}
+
+nav{
+    width: 100%;
+    height: 40px; 
+}
+
+
+
+.link{ 
+    display: block;
+    text-decoration: none;
+    color: #ffffff;  
+    width: 20%;
+    line-height: 40px;
+    float: left;
+    text-align: center;
+    
+}
+
+.link:hover{
+  
+    background: #ffffff;
+    color: #2CADFA;
+}
