@@ -1,0 +1,134 @@
+<!DOCTYPE html > 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>删除讲解</title>
+  <script src="js/jquery.js"></script>  
+  <script src="js/index.js"></script>
+ 
+<link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+	  <link rel="stylesheet" href="css/admin_index.css" media="screen" type="text/css" />
+ <script type="text/javascript">
+
+window.onload = function(){
+
+      var del = document.getElementById('del');
+      var list = document.getElementById('list');
+      var li = list.getElementsByTagName('li'); 
+
+      del.onclick = function () {
+                for (var i = 0; i < li.length; i++) {
+                    var input = li[i].getElementsByTagName('input')[0];
+                    if (input.checked) {
+                    	alert(li[i]);
+                        li[i].parentNode.removeChild(li[i]);
+                        i--;
+                    }
+                }
+            }
+}
+        
+ </script>
+</head>
+
+<body>
+</div>
+
+<div id="left_nav">
+<div id="home" style="width:150px;height:70px;text-align:center;">
+<a href="#" >
+<img style="margin-top:10px;" src="images/icnhome.png"/>
+</a>
+
+</div>
+
+	<ul id="accordion" class="accordion">
+		<li>
+			<div class="link"><i class="fa fa-keyboard-o"></i>发布公告<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">添加文章</a></li>
+				<li><a href="#">删除文章</a></li>
+				<li><a href="#">修改内容</a></li>
+				
+			</ul>
+		</li>
+		<li>
+			<div class="link"><i class="fa fa-line-chart"></i>在线测试<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">开启在线测试</a></li>
+				<li><a href="#">关闭在线测试</a></li>
+				
+			
+			</ul>
+		</li>
+		<li>
+			<div class="link"><i class="fa fa-pencil"></i>每日一练<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">添加练习</a></li>
+				<li><a href="#">删除练习</a></li>
+				<li><a href="#">修改练习</a></li>
+	
+			</ul>
+		</li>
+		<li><div class="link"><i class="fa fa-book"></i>名师讲解<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">添加讲解</a></li>
+				<li><a href="#">删除讲解</a></li>
+				<li><a href="#">修改讲解</a></li>
+		
+			</ul>
+			
+		</li>
+				<li><div class="link"><i class="fa fa-user"></i>管理员<i class="fa fa-chevron-down"></i></div>
+			<ul class="submenu">
+				<li><a href="#">退出登录</a></li>
+
+		
+			</ul>
+			
+		</li>
+	</ul> 
+
+</div>
+<div id="content">
+   
+   <p class="header">删除讲解</p>
+
+   <form action="#" method="post"> 
+     <div class="article-list"  >
+     	<ul id="list">
+     		<li>1、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
+     		<li>2、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
+            <li>3、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
+     		<li>4、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
+     		<li>5、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
+     		<li>6、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
+     		<li>7、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
+     		<li>8、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
+     		<li>9、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
+     		<li>10、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
+     	</ul>
+     </div>
+     <div class="content-page">
+     	<ul>
+     		<li><a herf="#">Pre</a></li>
+     		<li><a herf="#">1</a></li>
+            <li><a herf="#">2</a></li>
+     		<li>...</li>
+     		<li><a herf="#">10</a></li>
+     		<li><a herf="#">Next</a></li> 
+     	</ul>
+     </div>
+
+     <button type="submit" class="submit" id="del">删除</button>
+   	
+   </form>
+   
+
+</div>
+
+</body>
+</html>
