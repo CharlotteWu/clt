@@ -1,37 +1,21 @@
-<!DOCTYPE html > 
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>删除练习</title>
-  <script src="js/jquery.js"></script>  
-  <script src="js/index.js"></script>
- 
+<title>修改练习</title>
+  <script src="js/jquery.js"></script> 
+ <script src="js/index.js"></script>
+ <link rel="stylesheet" href="css/jquery.wysiwyg.css" type="text/css"/> 
+<script type="text/javascript" src="js/jquery.wysiwyg.js"></script>
+<script type="text/javascript" src="js/wysiwyg.image.js"></script>
+<script type="text/javascript" src="js/wysiwyg.link.js"></script>
+<script type="text/javascript" src="js/wysiwyg.table.js"></script>
 <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 	  <link rel="stylesheet" href="css/admin_index.css" media="screen" type="text/css" />
- <script type="text/javascript">
 
-window.onload = function(){
-
-      var del = document.getElementById('del');
-      var list = document.getElementById('list');
-      var li = list.getElementsByTagName('li'); 
-
-      del.onclick = function () {
-                for (var i = 0; i < li.length; i++) {
-                    var input = li[i].getElementsByTagName('input')[0];
-                    if (input.checked) {
-                    	alert(li[i]);
-                        li[i].parentNode.removeChild(li[i]);
-                        i--;
-                    }
-                }
-            }
-}
-        
- </script>
 </head>
 
 <body>
@@ -92,39 +76,24 @@ window.onload = function(){
 		</li>
 	</ul>
 
-
 </div>
 <div id="content">
    
-   <p class="header">删除练习</p>
+   <p class="header">修改练习</p>
 
    <form action="#" method="post"> 
-     <div class="article-list"  >
-     	<ul id="list">
-     		<li>1、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
-     		<li>2、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
-            <li>3、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
-     		<li>4、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
-     		<li>5、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
-     		<li>6、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
-     		<li>7、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
-     		<li>8、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
-     		<li>9、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
-     		<li>10、hahahhahahahhahhaaa<span><input type="checkbox"></span></li>
-     	</ul>
-     </div>
-     <div class="content-page">
-     	<ul>
-     		<li><a herf="#">Pre</a></li>
-     		<li><a herf="#">1</a></li>
-            <li><a herf="#">2</a></li>
-     		<li>...</li>
-     		<li><a herf="#">10</a></li>
-     		<li><a herf="#">Next</a></li> 
-     	</ul>
+     <div class="content-title">
+     	<span>题目:</span>
+     	<span class="c-title"><input type="text"></input></span>
+     </div> 
+     <div class="main-content">
+     	<span>答案:</span>
+     	<span >
+     		<textarea id="wysiwyg" rows="5" cols="103"></textarea>
+     	</span> 
      </div>
 
-     <button type="submit" class="submit" id="del">删除</button>
+     <button class="submit">提交</button>
    	
    </form>
    

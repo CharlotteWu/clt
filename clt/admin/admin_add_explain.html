@@ -5,10 +5,14 @@
 <title>添加讲解</title>
   <script src="js/jquery.js"></script> 
  <script src="js/index.js"></script>
- 
+<script type="text/javascript" src="js/wysiwyg.table.js"></script>
+   <link rel="stylesheet" href="css/jquery.wysiwyg.css" type="text/css"/> 
+<script type="text/javascript" src="js/jquery.wysiwyg.js"></script>
+<script type="text/javascript" src="js/wysiwyg.image.js"></script>
+<script type="text/javascript" src="js/wysiwyg.link.js"></script>
+<script type="text/javascript" src="js/wysiwyg.table.js"></script>
 <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
-	<link href="css/font-awesome.min.css" rel="stylesheet">
-
+	<link href="css/font-awesome.min.css" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 	  <link rel="stylesheet" href="css/admin_index.css" media="screen" type="text/css" />
 
@@ -25,13 +29,13 @@
 
 </div>
 
-	<ul id="accordion" class="accordion">
+		<ul id="accordion" class="accordion">
 		<li>
 			<div class="link"><i class="fa fa-keyboard-o"></i>发布公告<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="#">添加文章</a></li>
-				<li><a href="#">删除文章</a></li>
-				<li><a href="#">修改内容</a></li>
+				<li><a href="admin_add_article.html">添加文章</a></li>
+				<li><a href="admin_delete_article.html">删除文章</a></li>
+				<li><a href="admin_change_article.html">修改内容</a></li>
 				
 			</ul>
 		</li>
@@ -47,17 +51,17 @@
 		<li>
 			<div class="link"><i class="fa fa-pencil"></i>每日一练<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="#">添加练习</a></li>
-				<li><a href="#">删除练习</a></li>
-				<li><a href="#">修改练习</a></li>
+				<li><a href="admin_add_practice.html">添加练习</a></li>
+				<li><a href="admin_delete_practice.html">删除练习</a></li>
+				<li><a href="admin_change_practice.html">修改练习</a></li>
 	
 			</ul>
 		</li>
 		<li><div class="link"><i class="fa fa-book"></i>名师讲解<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
-				<li><a href="#">添加讲解</a></li>
-				<li><a href="#">删除讲解</a></li>
-				<li><a href="#">修改讲解</a></li>
+				<li><a href="admin_add_explain.html">添加讲解</a></li>
+				<li><a href="admin_delete_explain.html">删除讲解</a></li>
+				<li><a href="admin_change_explain.html">修改讲解</a></li>
 		
 			</ul>
 			
@@ -70,7 +74,8 @@
 			</ul>
 			
 		</li>
-	</ul> 
+	</ul>
+
 
 </div>
 <div id="content">
@@ -85,7 +90,7 @@
      <div class="main-content">
      	<span>详解:</span>
      	<span >
-     		<textarea cols="100" rows="20"></textarea>
+     		<textarea id="wysiwyg" rows="5" cols="103"></textarea>
      	</span> 
      </div>
 

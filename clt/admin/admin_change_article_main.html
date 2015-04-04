@@ -1,16 +1,20 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>首页</title>
+<title>修改文章</title>
   <script src="js/jquery.js"></script> 
  <script src="js/index.js"></script>
- 
-<link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
-	<link href="css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-	  <link rel="stylesheet" href="css/admin_index.css" media="screen" type="text/css" />
+ <link rel="stylesheet" href="css/jquery.wysiwyg.css" type="text/css"/> 
+<script type="text/javascript" src="js/jquery.wysiwyg.js"></script>
+<script type="text/javascript" src="js/wysiwyg.image.js"></script>
+<script type="text/javascript" src="js/wysiwyg.link.js"></script>
+<script type="text/javascript" src="js/wysiwyg.table.js"></script>
+<link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+ <link href="css/font-awesome.min.css" rel="stylesheet"> 
+ <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+ <link rel="stylesheet" href="css/admin_index.css" media="screen" type="text/css" />
 
 </head>
 
@@ -25,7 +29,7 @@
 
 </div>
 
-	<ul id="accordion" class="accordion">
+		<ul id="accordion" class="accordion">
 		<li>
 			<div class="link"><i class="fa fa-keyboard-o"></i>发布公告<i class="fa fa-chevron-down"></i></div>
 			<ul class="submenu">
@@ -73,16 +77,28 @@
 	</ul>
 
 
-
 </div>
 <div id="content">
+   
+   <p class="header">修改文章正文</p>
 
-<ul class="guide">
-<li><a href="admin_practice.html"><div class="content" id="practice">每日一练</div></a></li>
-<li><a href=""><div class="content" id="test">在线测试</div></a></li>
-<li><a href="admin_article.html"><div id="announcement" class="content">资讯公告</div></a></li>
-<li><a href="admin_explain.html"><div id="lecture" class="content">名师讲解</div></a></li>
-</ul>
+   <form action="#" method="post"> 
+     <div class="content-title">
+     	<span>标题:</span>
+     	<span class="c-title"><input type="text"></input></span>
+     </div> 
+     <div class="main-content">
+     	<span>内容:</span>
+     	<span >
+     		<textarea id="wysiwyg" rows="5" cols="103"></textarea>
+     	</span> 
+     </div>
+
+     <button class="submit">提交</button>
+   	
+   </form>
+   
+
 </div>
 
 </body>

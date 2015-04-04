@@ -86,6 +86,10 @@ header{
     display: none;
 }
 
+.login-form form p{
+    text-align: center;
+}
+
 .register-form,.login-form{
   width: 500px;
   height: 300px; 
@@ -108,7 +112,7 @@ header{
 }
 
 .regis p input,.log p input{
-    width: 200px;
+    width: 300px;
     height: 25px;
     border-radius: 15px; 
 }
@@ -158,6 +162,8 @@ header{
  
 .logo{
     margin-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .menu {
@@ -236,8 +242,16 @@ header{
     border-bottom: 1px dashed #2CADFA; 
 }
 
-.content ul li span{
+.content ul li a{
+    text-decoration: none;
+    color: #000000;
     margin-left: 20px;
+
+}
+
+.content ul li span{
+    float: right;
+    margin-right: 20px;
 }
 
 .box{  
@@ -252,8 +266,11 @@ header{
 .sidebar{ 
     position: absolute;  
     width: 200px;
-    height: 400px;
-    background: #2CADFA;  
+    height: 80%; 
+    background:-webkit-linear-gradient(#2CADFA,#2CADFA,#2CADFA,#A2DBFD,#ffffff); 
+    background:-moz-linear-gradient(#2CADFA,#2CADFA,#2CADFA,#A2DBFD,#ffffff); 
+    background:-ms-linear-gradient(#2CADFA,#2CADFA,#2CADFA,#A2DBFD,#ffffff); 
+    background: linear-gradient(#2CADFA,#2CADFA,#2CADFA,#A2DBFD,#ffffff);   
     display: inline-block;
 }
 
@@ -316,13 +333,13 @@ header{
     position: relative; 
     left: 220px ;
     right: 10px;  
-    top: 30px;  
+    top: 20px;  
     width: 80%;  
 }
 
 
 .content-list p{
-   font-size: 35px;
+   font-size: 32px;
    border-bottom: 3px solid #2CADFA;
    line-height: 50px;
 }
@@ -335,13 +352,13 @@ header{
    text-decoration: none;
     color: #000000;
     margin-left: 10px;
-    line-height: 30px;
+    line-height: 50px;
 }
 
 .content-list ul li span{
     float: right;
     margin-right: 10px;
-     line-height: 30px;
+     line-height: 50px;
 }
 
 .pages{
@@ -389,15 +406,41 @@ header{
    border-bottom: 3px solid #2CADFA;
 }
 
-.article-title span{
+.a-title {
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 28px;
 }
  
+.article-content  { 
+    width: 100%;
+}
+
 .article-content p{
-   line-height: 40px;
+   line-height: 30px;
 }
+
+.img{
+    width: 100%; 
+}
+
+.article-content img{  
+    margin: 0 auto;
+}
+
+ .date{
+    float: right;
+    margin-right: 50px; 
+ }
  
+.download{
+    margin-top: 20px;
+}
+
+.download a{
+    text-decoration: none;
+    color: #000000;
+}
+
 .form h1{
    text-align: center;
 }
@@ -412,7 +455,7 @@ header{
 
 #imghead {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);}
 
-.submit{
+.submit {
     width: 200px;
     height: 50px;  
     background: rgba(255,255,255,1);
@@ -427,15 +470,39 @@ header{
     cursor: pointer;
 } 
 
-.submit:hover{
-     background: #2CADFA;
-     color: #ffffff;
-     border: 0;
+.ms button,.access button{
+    width: 200px;
+    height: 50px;  
+    float: left;
+    background: #ffffff;
+    border-radius: 5px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    color: #000000;
+    transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -webkit-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out; 
+    cursor: pointer;
+    margin-left: 20px;
 }
 
-footer{ 
+.submit:hover,.ms button:hover,.access button:hover{ 
+     background: #2CADFA;
+     color: #ffffff;
+     border: 0; 
+}
+
+.choice-button{
+    margin-left:25%;
+    padding-top: 15%;
+}
+
+ 
+
+footer{  
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     background: #2CADFA;
     width: 100%;   
 }
