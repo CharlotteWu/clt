@@ -6,13 +6,41 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script type="text/javascript" src="js/jquery-1.11.2.js"></script> 
   <script type="text/javascript" src="js/script.js"></script> 
+  <script type="text/javascript">
+    window.onload = function(){
+      var access = document.getElementById('access');
+    var m = 120; 
+    var s = 0;
+   function showtime(){
+    document.getElementById('minutes').innerHTML = m;
+    document.getElementById('seconds').innerHTML = s;
+   s = s-1;
+    if(s==-1){
+        if(m ==5){
+       alert("还剩下五分钟哦");
+          }
+     m = m -1;
+     s = 59;
+   }
+ 
+  if(m==0){
+     ///时间结束强制提交
+    access.onsubmit();
+  }
+ }
+clearInterval(settime); 
+var settime = setInterval(function(){
+  showtime();
+},1000);
+    }
+  </script>
  </head>
  <body>
     <!--导航栏-->
    
-       
+      
          <div class="main"> 
-            <div class="sidebar" id="sidebar">
+         <div class="sidebar" id="sidebar">
           <img src="img/logo-min.png">
            <ul>
             <li> 
@@ -56,29 +84,38 @@
               <p>Copyright&copy电子通信与软件工程系</p>
               <p>联系电话：020-61786104</p>
               <p>邮编：510970</p>
-              <p>地址:广东省广州市从化温泉镇中山大学南方学院电子通信与软件工程系</p></br> 
+              <p>地址:广东省广州市从化温泉镇中山大学南方学院电子通信与软件工程系</p></br>
+              <p>友情链接：</p> 
+                <p><a href="http://www.nfu.edu.cn/">中山大学南方学院</a></p>
+                <p><a href="http://dzx.nfu.edu.cn/">电子通信与软件工程系</a></p>
+                <p><a href="http://www.gzzk.cn/">广州招考</a></p>
+                <p><a href="http://sk.neea.edu.cn/jsjdj/">全国计算机等级考试</a></p> 
            </div>
            
         </div> 
   <div class="content-area" >
-           <div class="choice-button">
-              <div class="ms">
-               <a href="test-ms.html"><button >一级MS</button></a>
-              </div>
-               <div class="access">
-                 <a href="test-access.html"><button >二级ACCESS</button></a>
-              </div>
-           </div>   
-
-           <div class="friendly-link">
-                <span>友情链接：</span> 
-                <span><a href="http://www.nfu.edu.cn/">中山大学南方学院</a></span>
-                <span><a href="http://dzx.nfu.edu.cn/">电子通信与软件工程系</a></span>
-                <span><a href="http://www.gzzk.cn/">广州招考</a></span>
-                <span><a href="http://sk.neea.edu.cn/jsjdj/">全国计算机等级考试</a></span> 
-           </div> 
-        </div>
+   <h1 style="text-align: center">计算机二级ACCESS模拟考</h1>
+  <div id="timeOut"><span id="minutes"></span>:<span id="seconds"></span></div>
+            <form action="" method="post" id="access">
+              <p><div class="test">
+                  <span>1</span>、计算机有什么组成?</br>        
+                  <input type="radio" name="choice" />A:键盘</br>
+                  <input type="radio" name="choice" />B:鼠标</br>
+                  <input type="radio" name="choice" />C:主机</br>
+                  <input type="radio" name="choice" />D:以上所有</br> 
+             </div></p>
+              <p><div class="test">
+                  <span>2</span>、计算机有什么组成?</br>        
+                  <input type="radio" name="choice1" />A:键盘</br>
+                  <input type="radio" name="choice1" />B:鼠标</br>
+                  <input type="radio" name="choice1" />C:主机</br>
+                  <input type="radio" name="choice1" />D:以上所有</br> 
+             </div></p>
+              <p><input class="submit" type="submit" value="提交"></input></p>
+             </form>
+          </div>
+           <div id="back-to-top"></div>
         </div> 
-    
+      
  </body>
 </html>

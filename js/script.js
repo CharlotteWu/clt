@@ -3,41 +3,39 @@ $(function(){
              $("#menu").on("click","span",function(){ 
 
                   if($(this).hasClass("bth-active")){
-                     
+                      
                   }
                
                   var currentIndex = $(this).index();
                   var marginL = "-"+currentIndex*100+"%";
-                  
+
                  if($("#expand").hasClass("active")){
                 
                      $("#expand .expandlist").animate({marginLeft:marginL});
                  }else{
                    $("#expand .expandlist").css({marginLeft:marginL});
                    $("#expand").animate({height:"40px"}).addClass("active"); 
-                 }
-
-                 $(this).addClass("bth-active").siblings.removeClass("bth-active");
+                 } 
+                $(this).addClass("btn-active").
+                        css('background','#ffffff').
+                        css('color','#2CADFA').
+                        siblings().
+                        removeClass("btn-active").
+                        css('background','#2CADFA').
+                        css('color','#ffffff');
                  return false; 
              });
 
-              $(".expand-div").on("click","a",function(){
-                  $("#expand").animate({height:"0px"},function(){ 
-                     $(this).removeClass("active");
-                     $("#menu .bth-active").removeClass("bth-active");
-                  });  
-                  
-              });
+         //外部按关闭
    
-   
- //answer show
+          $('.close-btn').on("click",function(){
+            $('#menu .btn-active').css('background','#2CADFA').css('color','#ffffff').removeClass('btn-active');
+             $("#expand").animate({height:"0px"},function(){   
+               $(this).removeClass('active'); 
+             }); 
 
-   $("#answer").hide();
-   $("#click-answer").on("click",function(){
-
-        $("#answer").fadeIn("slow");
-   });
-
+             return false;
+          });
 
 //login&register part
    $('.register').on("click",function(){
@@ -53,6 +51,13 @@ $(function(){
           $('.background').css('display','block');
           $('.login-form').css('display','block'); 
    }); 
+
+   $('#side3').on("click",function(){
+          $('#side3').addClass('.background');
+          $('#side3').addClass('.contact-form');
+          $('.background').css('display','block');
+          $('.contact-form').css('display','block'); 
+   });
 
   $('.close').on("click",function(){
           $('.register').removeClass('.background');
@@ -74,6 +79,12 @@ $(function(){
           $('.confirm').text("");
    }); 
 
+  $('.close').on("click",function(){ 
+          $('#side3').removeClass('.background');
+          $('#side3').removeClass('.contact-form');
+          $('.background').css('display','none');
+          $('.contact-form').css('display','none');  
+   });
  //验证用户名
   $('#regis-name').blur(function(){
       var re = /[\W]/g;
@@ -133,8 +144,29 @@ $(function(){
       }  
   });
 
- })
 
+ //search indentity information ajax part 学籍查找
+ /*$('#search').on('click',function(){
+   $.ajax({
+     url:'',
+     type:'get',
+     dataType:'json',
+     success:function(data){
+       if(data.success){
+        $('#return').html(data.msg);
+       }else{
+        $('#return')html("出现错误："+data.msg);
+       }
+     },
+     error:function(jqXHR){
+       alert("出现错误："+jqXHR.status);
+     },
 
+   });
+
+ });*/
+   
+
+ }) 
 
  

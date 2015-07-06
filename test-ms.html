@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>计算机等级考试</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-1.11.2.js"></script> 
+  <script type="text/javascript" src="js/script.js"></script> 
+  <script type="text/javascript">
+    window.onload = function(){
+    var m = 90; 
+    var s = 0;
+    var ms = document.getElementById('ms');
+   function showtime(){
+    document.getElementById('minutes').innerHTML = m;
+    document.getElementById('seconds').innerHTML = s;
+   s = s-1;
+    if(s==-1){
+        if(m ==5){
+       alert("还剩下五分钟哦");
+          }
+     m = m -1;
+     s = 59;
+   }
+ 
+  if(m==0){
+     ///时间结束强制提交
+     ms.onsubmit();
+  }
+ }
+clearInterval(settime); 
+var settime = setInterval(function(){
+  showtime();
+},1000);
+    }
+  </script>
+ </head>
+ <body>
+    <!--导航栏-->
+    
+      
+         <div class="main"> 
+            <div class="sidebar" id="sidebar">
+          <img src="img/logo-min.png">
+           <ul>
+            <li> 
+             <a href="index.html">首页</a>  
+            </li> 
+            <li> 
+               <span>咨询公告</span> 
+                         <ul>
+                          <li><a href="message.html">最新公告</a></li>
+                          <li><a href="test-notify.html">报考通知</a></li>
+                          <li><a href="receive-certificate.html">证书领取</a></li> 
+                         </ul>  
+            </li>
+            <li> 
+               <span>模拟战场</span> 
+                         <ul>
+                          <li><a href="permission.html">考试大纲</a></li>
+                          <li><a href="question.html">每日一题</a></li>
+                          <li><a href="test.html">模拟试题</a></li>
+                          <li><a href="teacher.html">名师精讲</a></li>
+                          <li><a href="download.html">相关下载</a></li>
+                         </ul> 
+            </li>
+            <li> 
+               <span>报名&查询入口</span> 
+                         <ul>
+                          <li><a href="sign.html">报名</a></li>
+                          <li><a href="http://chaxun.neea.edu.cn/examcenter/query.cn?op=doQueryCond&sid=300&pram=certi">查询成绩</a></li>
+                          <li><a href="admission.html">查询准考证</a></li>
+                         </ul> 
+            </li>
+             <li> 
+               <span>常见问题</span> 
+                        <ul>
+                          <li><a href="q&a.html">常见问题</a></li> 
+                         </ul> 
+             </li>  
+           </ul> 
+
+           <div class="foote">
+              <p>Copyright&copy电子通信与软件工程系</p>
+              <p>联系电话：020-61786104</p>
+              <p>邮编：510970</p>
+              <p>地址:广东省广州市从化温泉镇中山大学南方学院电子通信与软件工程系</p></br>
+              <p>友情链接：</p> 
+                <p><a href="http://www.nfu.edu.cn/">中山大学南方学院</a></p>
+                <p><a href="http://dzx.nfu.edu.cn/">电子通信与软件工程系</a></p>
+                <p><a href="http://www.gzzk.cn/">广州招考</a></p>
+                <p><a href="http://sk.neea.edu.cn/jsjdj/">全国计算机等级考试</a></p> 
+           </div>
+           
+        </div> 
+  <div class="content-area" >
+  <h1 style="text-align: center">计算机一级MS模拟考</h1>
+            <div id="timeOut"><span id="minutes"></span>:<span id="seconds"></span></div>
+            <form action="" method="post" id="ms">
+              <p><div class="test">
+                  <span>1</span>、计算机有什么组成?</br>   
+                  <div class="choice">
+                    <input type="radio" name="choice" />A:键盘 </br>
+                  <input type="radio" name="choice" />B:鼠标 </br>
+                  <input type="radio" name="choice" />C:主机 </br>
+                  <input type="radio" name="choice" />D:以上所有 </br>
+                  </div>     
+                   
+             </div> </br>
+              <div class="test">
+                  <span>2</span>、计算机有什么组成?</br>        
+                 <div class="choice">
+                    <input type="radio" name="choice" />A:键盘 </br>
+                  <input type="radio" name="choice" />B:鼠标 </br>
+                  <input type="radio" name="choice" />C:主机 </br>
+                  <input type="radio" name="choice" />D:以上所有 </br>
+                  </div>   
+             </div></p>
+              <p><input class="submit" type="submit" value="提交"></input></p>
+             </form>
+          </div>
+           <div id="back-to-top"> 
+            </div>
+        </div> 
+      
+ </body>
+</html>

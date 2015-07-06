@@ -58,6 +58,7 @@ table{
 
 /*formal style begin*/
 
+/*login & registration form style*/
 header{
     background: #2CADFA;
 }
@@ -86,7 +87,20 @@ header{
     display: none;
 }
 
-.register-form,.login-form{
+.login-form form p,.contact-form p{
+    text-align: center;
+}
+
+.contact-form p{
+  line-height: 30px;
+}
+
+.cont{
+    margin-top: 60px;
+}
+
+
+.register-form,.login-form,.contact-form{
   width: 500px;
   height: 300px; 
   z-index: 999;
@@ -108,7 +122,7 @@ header{
 }
 
 .regis p input,.log p input{
-    width: 200px;
+    width: 300px;
     height: 25px;
     border-radius: 15px; 
 }
@@ -151,25 +165,35 @@ header{
     -ms-transform: rotate(360deg);
 }
 
+/*login & registration form style end*/
+
 .index-logo img{
          margin:0 14% 2% ;
          width: 70%;
 }
  
-.logo{
-    margin-left: 20px;
+.logo img{
+     margin-left: 3%;
+}
+
+.welcome{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    color: #ffffff;
 }
 
 .menu {
     height: 40px;
-    width: 100%;
+    width: 80%;
+    margin:0 auto;
 } 
  
 .link{ 
     display: block;
     text-decoration: none;
     color: #ffffff;  
-    width: 20%;
+    width: 16%;
     line-height: 40px;
     float: left;
     text-align: center;
@@ -183,23 +207,24 @@ header{
     cursor: pointer;
 }
 
+/*second menu start*/
 .expand{
     width: 100%; 
     height:  0px;   
     position: relative; 
     background: #ffffff; 
     border-bottom: 1px solid #2CADFA;
-    border-radius: 0 0 15px 15px; 
+    border-radius: 0 0 15px 15px;  
     overflow: hidden;  
 }
 
 .expandlist{
-    width: 500%;
+    width: 600%;
     height: 40px;     
 }
 
 .expand-div{
-    width: 20%; 
+    width: 16.66%; 
     text-align: center;
     float: left;   
 } 
@@ -210,34 +235,76 @@ header{
     line-height: 40px;
 } 
 
+.close-btn{
+    width: 15px;
+    height: 12px;
+    background:#ffffff url("../img/close-btn.png") center no-repeat;
+    position: absolute; 
+    left: 49.5%;
+    top: 30px;
+    cursor: pointer;
+}
+/*second menu ends*/
+
+#container{
+    width: 960px;
+    position: relative;
+    margin:0 auto; 
+    margin-top:3%; 
+}
+
+/*billboard */
 .billboard { 
     height: 250px;
     width: 500px;
     border: 1px solid #2CADFA;
-    border-radius: 15px;
-    margin-left: 8%;
-    margin-top: 1%;
+    border-radius: 15px; 
     float: left;
+    overflow: hidden;
 }
 
-.title{
+.title,.r-title{
     color: #ffffff;
     background: #2CADFA; 
     padding: 8px 0;
     border-radius: 15px 15px 0 0;
 }
 
-.title p,.title span {
+.title p,.r-title span {
     margin-left: 15px;
 }
+
+ 
+
+.title span {
+    float: right;
+    margin-right: 10px;
+}
+
+.title span a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ 
 
 .content ul li{
     line-height: 30px;
     border-bottom: 1px dashed #2CADFA; 
 }
 
-.content ul li span{
+ 
+
+.content ul li a{
+    text-decoration: none;
+    color: #000000;
     margin-left: 20px;
+
+}
+
+.content ul li span{
+    float: right;
+    margin-right: 20px;
 }
 
 .box{  
@@ -249,24 +316,72 @@ header{
     padding-bottom: 150px;
 }
 
+/*daily question area*/
+.daily-q{   
+    height: 250px;
+    width: 300px;
+    border: 1px solid #2CADFA;
+    border-radius: 15px;
+    float: right;
+    overflow: hidden;
+    position: relative; 
+}
+
+
+.ques {
+    width: 100%;
+    height: 150px;
+   line-height: 25px;
+   margin-left: 5px;
+   padding-bottom: -5px; 
+}
+
+.ques span {
+    width: 100%;
+    height: 150px;
+    overflow: hidden; 
+}
+
+.daily-q button{ 
+    border: 0;
+    border-radius: 5px;
+    background: #2CADFA;
+    color: #ffffff;
+    box-shadow: 5px 5px 5px #888888;  
+    position: absolute;
+    bottom: 10px;
+    left: 70px;
+}
+
+
+.daily-q button a:link,.daily-q button a:visited{
+    color: #ffffff;
+    text-decoration: none;
+}
+/*secondary page side menu bar  */
+
 .sidebar{ 
-    position: absolute;  
-    width: 200px;
-    height: 400px;
-    background: #2CADFA;  
+    position: fixed;  
+    width: 250px;
+    height: 100%;  
+    z-index: 999;
+    background: #2CADFA;   
     display: inline-block;
 }
 
+.sidebar img,.sidebar ul{
+
+   margin-top: 20px;
+}
+
 .sidebar ul li{
-    width:  200px;
-    height: 35px;
-    border-bottom: 1px solid #ffffff;
-    border-top: 1px solid #ffffff;
+    width:  250px;
+    height: 35px;  
     float: left;
-    line-height: 30px;
+    line-height: 35px;
     color: #ffffff; 
     cursor: pointer;
-    background: url(../img/point.png) no-repeat 140px;
+    background: url(../img/point.png) no-repeat 170px;
     transition: 0.2s ease-out;
     -moz-transition: 0.2s ease-out;
     -webkit-transition: 0.2s ease-out;
@@ -275,22 +390,21 @@ header{
 }
 
 .sidebar ul li span,.sidebar ul li a{
-    margin-left: 25px;
-    position: relative;
+    margin-left: 25px; 
     text-decoration: none;
     color: #ffffff;
 }
  
-.sidebar ul li:hover{
-     background-position: 150px;
+.sidebar ul li:hover{ 
+     background-position: 200px;
+     background-color: #4BB6F6;
 }
 
-.sidebar ul li ul{
- 
+.sidebar ul li ul{ 
     position: absolute;
     width: 200px;
-    left: 200px;
-    top: -1px; 
+    left: 250px;
+    top: -20px; 
     display: none; 
 }
 
@@ -299,32 +413,57 @@ header{
 }
  
 .sidebar ul li ul li{
-    background: #2CADFA; 
-    line-height: 35px;
-    z-index: 100; 
+    background: #4BB6F6;   
 }
 
 .sidebar ul li ul li a{ 
-    color: #ffffff;
-    line-height: 35px;
+    color: #ffffff; 
     text-decoration: none;
     margin-left: 10px;
 }
 
+.foote{
+    color: #ffffff;   
+    font-size: 10px;
+    margin-left: 15px;
+    position: absolute;
+    bottom: 3%; 
+}
+
+.foote p{
+    text-align: left;
+    line-height: 20px;
+}
+
+.foote a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*side bar menu style ends*/
+
+/*secondary page style main content style start*/
+
+.box{
+    position: relative;
+}
 
 .content-area{
     position: relative; 
-    left: 220px ;
+    left: 280px ;
     right: 10px;  
-    top: 30px;  
-    width: 80%;  
+    top: 20px;  
+    width: 75%;  
 }
 
+.content-list{
+    display: block; 
+}
 
-.content-list p{
-   font-size: 35px;
+.page-title{
+   font-size: 32px;
    border-bottom: 3px solid #2CADFA;
-   line-height: 50px;
+   line-height: 45px;
 }
 
 .content-list ul li{ 
@@ -335,14 +474,16 @@ header{
    text-decoration: none;
     color: #000000;
     margin-left: 10px;
-    line-height: 30px;
+    line-height: 45px;
 }
 
 .content-list ul li span{
     float: right;
     margin-right: 10px;
-     line-height: 30px;
+     line-height: 45px;
 }
+
+/*paging style */
 
 .pages{
     margin-top: 20px;   
@@ -354,50 +495,64 @@ header{
     float: left; 
     margin-left: 5px;
     }
-
-.right-side{
-     width: 20%;
-    margin-right: 20%;
-    margin-top: 1%;
-    float: right;
-}
-
-.daily-q{  
-    
-    height: 250px;
-    width: 300px;
-    border: 1px solid #2CADFA;
-    border-radius: 15px;
-}
-
-
-.daily-q span{
-   line-height: 40px;
-   margin-left: 5px;
-}
-
-.daily-q button{
-    border: 0;
-    border-radius: 5px;
-    background: #2CADFA;
-    color: #ffffff;
-    box-shadow: 5px 5px 5px #888888;
-    margin-left: 5px;
+ 
+ 
+.form-title{
+    font-size: 25px; 
+    text-align: center;
 }
 
 .article-title {
    border-bottom: 3px solid #2CADFA;
+   padding-bottom: 5px;
 }
 
-.article-title span{
-    margin-left: 10px;
-    font-size: 25px;
+.a-title {
+    margin-left: 50px;
+    font-size: 28px;
+
 }
- 
+
+ .date,#count{
+    float: right;
+    margin-right: 50px; 
+ }
+.article-content  { 
+    width: 90%;
+    padding-top: 15px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+
 .article-content p{
-   line-height: 40px;
+   line-height: 30px; 
 }
+
+.img{
+    width: 100%; 
+}
+
+.article-content img{  
+    display: block;
+    margin: 0 auto;
+}
+
  
+ 
+.download{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.download a{
+    text-decoration: none;
+    color: #000000;
+    line-height: 25px;
+
+}
+
 .form h1{
    text-align: center;
 }
@@ -406,13 +561,19 @@ header{
     line-height: 40px;  
 }
 
+.form p input{
+    border-radius: 5px; 
+}
+
 .photo{
     float: right;
 }
 
+
+
 #imghead {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);}
 
-.submit{
+.submit {
     width: 200px;
     height: 50px;  
     background: rgba(255,255,255,1);
@@ -425,28 +586,195 @@ header{
     -ms-transition: 0.2s ease-out; 
     margin-left: 35%;
     cursor: pointer;
+    margin-top: 20px;
 } 
 
-.submit:hover{
+.test { 
+    width: 100%;
+    line-height: 30px;
+}
+
+  .choice{ 
+    margin-top: 5px;
+}
+
+.test input{  
+    margin-left: 50px;
+}
+ 
+.ms button,.access button,#check button{
+    width: 200px;
+    height: 50px;  
+    float: left;
+    background: #ffffff;
+    border-radius: 5px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    color: #000000;
+    transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -webkit-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out; 
+    cursor: pointer;
+    margin-left: 20px; 
+}
+
+#check button{
+    margin-top: 20px;
+}
+
+.submit:hover,.ms button:hover,.access button:hover,#check button:hover{ 
      background: #2CADFA;
      color: #ffffff;
-     border: 0;
+     border: 0; 
 }
 
-footer{ 
+.choice-button{
+    margin-left:25%;
+    padding-top: 15%;
+}
+ 
+#check,#return{
+    width: 270px;
+    height: 100px;
+    display: block;
+    margin: 0 auto; 
+    margin-top: 50px;
+}
+
+#return{
+    color: red;
+}
+
+#check input{
+    width: 150px;
+    border-radius: 5px; 
+}
+
+#check p,#return p{
+    line-height: 40px;
+}
+
+/*the fixed style link in the index page*/
+.side-nav{
+    position: fixed;
+    right:-1px;
+    bottom: 22%; 
+    width: 70px;
+    height: 210px;
+}
+
+#side1,#side2,#side3{
+    
+    width: 100%;
+    height: 70px; 
+    
+}
+ 
+#side1,#side2{
+    border-bottom: 1px solid #f6f0f0 ;
+}
+
+#side1{
+    background:#2CADFA url("../img/inform.png") center no-repeat;
+}
+
+#side1:hover{
+    background:#2CADFA url("../img/inform-w.png") center no-repeat;
+}
+
+#side2{
+    background:#2CADFA url("../img/certificate.png") center no-repeat;
+}
+
+#side2:hover{
+    background:#2CADFA url("../img/certificate-w.png") center no-repeat;
+}
+
+#side3{
+    background:#2CADFA url("../img/contact.png") center no-repeat;
+}
+
+#side3:hover{
+    background:#2CADFA url("../img/contact-w.png") center no-repeat;
+}
+
+/*the button which back to the top of the page*/
+
+#back-to-top{
+    width: 58px;
+    height: 42px;
+    background: url(../img/btn_top.png);
+    position: fixed;
+    right: 40px;
+    bottom: 120px;
+    display: none;
+    cursor: pointer;
+}
+
+/*set the test time */
+
+#timeOut{
     position: absolute;
-    bottom: 0;
-    background: #2CADFA;
-    width: 100%;   
+    right: 10px;
+    top: 10px;
+    color: #000000;
+    font-size: 25px;
+    color: red;
+    
 }
 
-.state{
-    padding: 10px;
+/*footer style ends*/
+
+footer{  
+    position: absolute;
+    bottom: -8%;
+    background: #2CADFA;
+    height: 92px;
+    width: 100%;   
+    padding-top: 10px;
+}
+
+.foot{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.state{  
+    float: left; 
+    margin-right: 30px;
 }
 
 .state p{
-    line-height: 20px;
-    text-align: center;
+    line-height: 20px; 
     color: #ffffff;
     font-size: 15px;
+}
+
+
+.friendly-link{
+    float: left;   
+    margin-top: 80px;  
+    font-size: 14px;  
+    width: 100%; 
+    border-top: 1px solid #8A8D91;  
+
+}
+
+.friendly-link span { 
+    display: inline-block;
+    width: 15%;
+     color: #8D8A91;   
+     line-height: 50px;   
+     text-align: center;
+
+}
+
+.friendly-link span a{
+    text-decoration: none;
+     color: #8D8A91; 
+}
+
+.friendly-link span a:hover{ 
+     color: #2CADFA; 
 }

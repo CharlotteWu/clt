@@ -66,29 +66,31 @@
  </head>
  <body>
     <!--导航栏-->
- 		<header>
- 		   <div class="logo">
- 		  	<img src="img/logo-min.png">
- 		  </div> 
- 		</header>  
-       <div class="box"> 
+ 	 
+      
         <div class="main"> 
- 		          <div class="sidebar" id="sidebar">
+ 		     <div class="sidebar" id="sidebar">
+          <img src="img/logo-min.png">
            <ul>
             <li> 
              <a href="index.html">首页</a>  
             </li> 
             <li> 
-               <a href="message.html">资讯公告</a>  
+               <span>咨询公告</span> 
+                         <ul>
+                          <li><a href="message.html">最新公告</a></li>
+                          <li><a href="test-notify.html">报考通知</a></li>
+                          <li><a href="receive-certificate.html">证书领取</a></li> 
+                         </ul>  
             </li>
             <li> 
                <span>模拟战场</span> 
                          <ul>
-                          <li><a href="http://edu.21cn.com/ncre/f_51_306654-1.htm">考试大纲</a></li>
+                          <li><a href="permission.html">考试大纲</a></li>
                           <li><a href="question.html">每日一题</a></li>
                           <li><a href="test.html">模拟试题</a></li>
-                          <li><a href="">名师精讲</a></li>
-                          <li><a href="">相关下载</a></li>
+                          <li><a href="teacher.html">名师精讲</a></li>
+                          <li><a href="download.html">相关下载</a></li>
                          </ul> 
             </li>
             <li> 
@@ -96,37 +98,45 @@
                          <ul>
                           <li><a href="sign.html">报名</a></li>
                           <li><a href="http://chaxun.neea.edu.cn/examcenter/query.cn?op=doQueryCond&sid=300&pram=certi">查询成绩</a></li>
-                          <li><a href="#">查询准考证</a></li>
+                          <li><a href="admission.html">查询准考证</a></li>
                          </ul> 
             </li>
              <li> 
-               <span>Q&A</span> 
+               <span>常见问题</span> 
                         <ul>
                           <li><a href="q&a.html">常见问题</a></li> 
                          </ul> 
              </li>  
            </ul> 
+
+           <div class="foote">
+              <p>Copyright&copy电子通信与软件工程系</p>
+              <p>联系电话：020-61786104</p>
+              <p>邮编：510970</p>
+              <p>地址:广东省广州市从化温泉镇中山大学南方学院电子通信与软件工程系</p></br> 
+           </div>
+           
         </div> 
           <div class="content-area form" >
             <form action="" method="post">
-               <h1>计算机报名表</h1>
+               <p class="form-title">全国计算机等级考试报名</p></br>
                 <div class="photo">
                    <div id="preview">
-                       <img id="imghead" border=0 width="192" height="144" />
+                       <img id="imghead" border=0 width="99" height="144" />
                    </div>
                    <input type="file" onchange="previewImage(this)" />
                    <p style="color: red;">蓝底，存储为JPG格式，图象文件名为*.JPG，其中*为考生14位报名号</p>
                 </div>
-                 <p>姓名：<input type="text" name="name" id="true-name"></input><span class="warning"></span> </p>
-                 <p>学号：<input type="text" name="number" id="number"></input><span class="warning2"></span></p>
+                 <p>考生姓名：<input type="text" name="name" id="true-name"></input><span class="warning"></span> </p>
+                 <p>考生学号：<input type="text" name="number" id="number"></input><span class="warning2"></span></p>
                  <p>出生年月：<input type="text" name="birth"></input><span style="color: red;">如:20150101</span></p>
-                 <p>证件类型:<select><option name="identity-type" value="jmsfz">居民身份证</option>
+                 <p>证件类型：<select><option name="identity-type" value="jmsfz">居民身份证</option>
                                      <option name="identity-type" value="jrzj">军人证件（军官证、警官证、士兵证）</option>
                                      <option name="identity-type" value="gajm">港澳居民来往内地通行证</option>
                                      <option name="identity-type" value="twjm">台湾居民往来大陆通行证（台胞证）</option>
                                      <option name="identity-type" value="wghz">外国护照</option></select></p>
-                 <p>证件号：<input type="text" name="identity" id="identity"></input><span class="warning3"></span> </p>
-                 <p>性别：<input type="radio" name="sex" value="1">男
+                 <p>&nbsp&nbsp&nbsp证件号：<input type="text" name="identity" id="identity"></input><span class="warning3"></span> </p>
+                 <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp性别：<input type="radio" name="sex" value="1">男
                           <input type="radio" name="sex" value="2">女</input></p>
                  <p>年级专业：<input type="text" name="profession"></input></p>
                  <p>联系电话：<input type="text" name="tel" id="tel"></input></p>
@@ -162,13 +172,13 @@
                                        <option name="degree" value="6">中专(中技)</option>
                                        <option name="degree" value="7">初中</option>
                                        <option name="degree" value="8">初中以下</option></select></p> 
-                  <p>职业：<select><option name="career" value="30">学生</option>
+                  <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp职业：<select><option name="career" value="30">学生</option>
                                    <option name="career" value="08">军人</option>
                                    <option name="career" value="10">失业(待业及无业)</option>
                                    <option name="career" value="24">教学人员</option>
                                    <option name="career" value="19">卫生技术人员</option>
                                    <option name="career" value="09">不便分类的从业人员</option></select> </p> 
-                  <p>民族：<select><option name="nation" value="01">汉族</option>
+                  <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp民族：<select><option name="nation" value="01">汉族</option>
                                    <option name="nation" value="02">蒙古族</option>
                                    <option name="nation" value="03">回族</option>
                                    <option name="nation" value="04">藏族</option>
@@ -176,15 +186,10 @@
                                    <option name="nation" value="06">苗族</option></select></p>  
                   <p><input class="submit" type="submit" value="提交"></input></p>
              </div>   
+
+             
         </div> 
-   <footer >
-       <div class="state">
-        <p> 地址:广东省广州市从化温泉镇中山大学南方学院电子通信与软件工程系办公室A1- 229 邮编:510970</p>
-        <p>Copyright © 2014 中山大学南方学院电子通信与软件工程系</p>
-        <p>网站制作：吴乙虹&陈思远</p>
-       </div> 
-    </footer>
-  </div>  
+   
     <div style="clear: both"></div>
  </body>
 </html>

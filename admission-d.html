@@ -6,12 +6,35 @@
  	<link rel="stylesheet" type="text/css" href="css/style.css">
  	<script type="text/javascript" src="js/jquery-1.11.2.js"></script> 
   <script type="text/javascript" src="js/script.js"></script> 
+  <script type="text/javascript">
+    $(function() {
+      $('#search').on('click',function(){
+   $.ajax({
+     url:'',
+     type:'get',
+     dataType:'json',
+     success:function(data){
+       if(data.success){
+        $('#return').html(data.msg);
+       }else{
+        $('#return')html("出现错误："+data.msg);
+       }
+     },
+     error:function(jqXHR){
+       alert("出现错误："+jqXHR.status);
+     },
+
+   });
+
+ });
+    })
+  </script>
  </head>
  <body>
     <!--导航栏-->
- 	  
-        <div class="main">
-           <div class="sidebar" id="sidebar">
+ 		  
+      <div class="main">
+         <div class="sidebar" id="sidebar">
           <img src="img/logo-min.png">
            <ul>
             <li> 
@@ -55,49 +78,35 @@
               <p>Copyright&copy电子通信与软件工程系</p>
               <p>联系电话：020-61786104</p>
               <p>邮编：510970</p>
-              <p>地址:广东省广州市从化温泉镇中山大学南方学院电子通信与软件工程系</p></br> 
+              <p>地址:广东省广州市从化温泉镇中山大学南方学院电子通信与软件工程系</p></br>
+              <p>友情链接：</p> 
+                <p><a href="http://www.nfu.edu.cn/">中山大学南方学院</a></p>
+                <p><a href="http://dzx.nfu.edu.cn/">电子通信与软件工程系</a></p>
+                <p><a href="http://www.gzzk.cn/">广州招考</a></p>
+                <p><a href="http://sk.neea.edu.cn/jsjdj/">全国计算机等级考试</a></p> 
            </div>
            
         </div> 
-        <div id="daily-q-list" class="content-list content-area">
-          <p class="page-title">每日一题</p>
-           <ul>
-            <li><a href="article.html">1、haha</a><span>2014-1-2</span></li>
-            <li><a href="article.html">2、haha</a><span>2014-1-2</span></li>
-            <li><a href="article.html">3、haha</a><span>2014-1-2</span></li>
-            <li><a href="article.html">4、haha</a><span>2014-1-2</span></li>
-            <li><a href="article.html">5、haha</a><span>2014-1-2</span></li>
-            <li><a href="article.html">6、haha</a><span>2014-1-2</span></li>
-            <li><a href="article.html">7、haha</a><span>2014-1-2</span></li>
-            <li><a href="article.html">8、haha</a><span>2014-1-2</span></li>
-            <li><a href="article.html">9、haha</a><span>2014-1-2</span></li>
-            <li><a href="article.html">10、haha</a><span>2014-1-2</span></li>
-           </ul>
-
-           <div class="pages" id="pages">
-            <ul>
-              <li id="previous"><span>Pre</span></li>
-              <li><a href="">1</a></li>
-              <li><a href="">2</a></li>
-              <li><a href="">3</a></li>
-              <li><a href="">4</a></li>
-              <li><a href="">...</a></li>
-              <li><a href="">30</a></li>
-              <li id="next"><span>Next</span></li>
-            </ul>
-           </div>
-
-           <div class="friendly-link">
-                <span>友情链接：</span> 
-                <span><a href="http://www.nfu.edu.cn/">中山大学南方学院</a></span>
-                <span><a href="http://dzx.nfu.edu.cn/">电子通信与软件工程系</a></span>
-                <span><a href="http://www.gzzk.cn/">广州招考</a></span>
-                <span><a href="http://sk.neea.edu.cn/jsjdj/">全国计算机等级考试</a></span> 
-           </div>
-        </div> 
-      <div>
-         
-     
- 		      
+        <div id="message-list" class="content-list content-area">
+          <p class="page-title">准考证查询</p>
+            <div id="check">
+              <form method="post" action="/">
+                <p>姓名：<input type="text" name="p-name"></p>
+                <p>身份证号：<input type="text" name="p-indentity"></p>
+                <p><button type="submit" id="search">提交</button></p>
+             </form> 
+            </div>
+              
+            <div id="return">
+              <form method="get" action="/">
+                <p>姓名：</p>
+                <p>身份证号：</p>
+                <p>准考证号：</p>
+              </form>
+            </div>
+        </div>
+          
+      </div>
+ 		     
  </body>
 </html>
